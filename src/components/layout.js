@@ -3,6 +3,16 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+const linkStyle = {
+  boxShadow: `none`,
+  textDecoration: `none`,
+  color: `inherit`,
+}
+
+const h2Style = {
+  marginTop: "5px",
+}
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -11,24 +21,37 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <>
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              ...scale(1.5),
+              marginBottom: rhythm(1.5),
+              marginTop: 0,
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h1>
+            <Link style={linkStyle} to={`/`}>
+              {title}
+            </Link>
+          </h1>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <h2 style={h2Style}>
+              <Link style={linkStyle} to="/cars">
+                Cars
+              </Link>
+            </h2>
+            <h2 style={h2Style}>
+              {" "}
+              <Link style={linkStyle} to="/car-parts">
+                Cars parts
+              </Link>
+            </h2>
+          </div>
+        </>
       )
     } else {
       header = (
