@@ -1,6 +1,7 @@
 ---
-title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
+title: My Second Post! ^_^
+date: '2015-05-06T23:46:37.121Z'
+description: mmm
 ---
 
 Wow! I love blogging so much already.
