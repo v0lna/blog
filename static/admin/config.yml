@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
+  - name: "blog-posts"
     label: "Blog"
-    folder: "content/blog"
+    folder: "content/blog-posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -17,6 +17,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "baseUrl", name: "baseUrl", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "cars"
     label: "Cars"
@@ -29,4 +30,20 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Base url", name: "baseUrl", widget: "string" }
+
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "car-parts"
+    label: "Car parts"
+    folder: "content/car-parts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Base url", name: "baseUrl", widget: "string" }
+
       - { label: "Body", name: "body", widget: "markdown" }

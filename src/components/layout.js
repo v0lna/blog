@@ -55,23 +55,43 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <>
+          <h3
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              fontFamily: `Montserrat, sans-serif`,
+              marginTop: 0,
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h3>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <h2 style={h2Style}>
+              <Link style={linkStyle} to="/cars">
+                Cars
+              </Link>
+            </h2>
+            <h2 style={h2Style}>
+              {" "}
+              <Link style={linkStyle} to="/car-parts">
+                Car parts
+              </Link>
+            </h2>
+          </div>
+        </>
       )
     }
     return (

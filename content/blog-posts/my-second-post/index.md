@@ -2,6 +2,7 @@
 title: My Second Post! ^_^
 date: '2015-05-06T23:46:37.121Z'
 description: mmm
+baseUrl: "blog"
 ---
 ![jack nicholson](/img/джек-николсон-2.png "Love blogging sooo much already")
 

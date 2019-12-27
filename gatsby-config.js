@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/blog-posts`,
+        name: `blog-posts`,
       },
     },
     {
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/cars`,
         name: `cars`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/car-parts`,
+        name: `car-parts`,
       },
     },
     {
@@ -81,6 +88,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
   ],
 }

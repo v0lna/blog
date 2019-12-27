@@ -2,6 +2,7 @@
 title: Volvo
 date: "2016-05-01T22:12:03.284Z"
 description: "Hello Volvo"
+baseUrl: "cars"
 ---
 
 This is Volvo car. It's amazing !
