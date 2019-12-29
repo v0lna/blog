@@ -2,12 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
-
-const linkStyle = {
-  boxShadow: `none`,
-  textDecoration: `none`,
-  color: `inherit`,
-}
+import headerStyle from "./style/layout.module.scss"
 
 const h2Style = {
   marginTop: "5px",
@@ -29,7 +24,7 @@ class Layout extends React.Component {
               marginTop: 0,
             }}
           >
-            <Link style={linkStyle} to={`/`}>
+            <Link to={`/`} className={headerStyle.navHeader}>
               {title}
             </Link>
           </h1>
@@ -38,15 +33,24 @@ class Layout extends React.Component {
               display: "flex",
               justifyContent: "space-around",
             }}
+            className={headerStyle.nav}
           >
             <h2 style={h2Style}>
-              <Link style={linkStyle} to="/cars">
+              <Link
+                to="/cars"
+                className={headerStyle.navItem}
+                activeClassName={headerStyle.activeNavItem}
+              >
                 Cars
               </Link>
             </h2>
             <h2 style={h2Style}>
               {" "}
-              <Link style={linkStyle} to="/car-parts">
+              <Link
+                to="/car-parts"
+                className={headerStyle.navItem}
+                activeClassName={headerStyle.activeNavItem}
+              >
                 Cars parts
               </Link>
             </h2>
@@ -62,14 +66,7 @@ class Layout extends React.Component {
               marginTop: 0,
             }}
           >
-            <Link
-              style={{
-                boxShadow: `none`,
-                textDecoration: `none`,
-                color: `inherit`,
-              }}
-              to={`/`}
-            >
+            <Link className={headerStyle.navHeader} to={`/`}>
               {title}
             </Link>
           </h3>
@@ -78,15 +75,24 @@ class Layout extends React.Component {
               display: "flex",
               justifyContent: "space-around",
             }}
+            className={headerStyle.nav}
           >
             <h2 style={h2Style}>
-              <Link style={linkStyle} to="/cars">
+              <Link
+                to="/cars"
+                className={headerStyle.navItem}
+                activeClassName={headerStyle.activeNavItem}
+              >
                 Cars
               </Link>
             </h2>
             <h2 style={h2Style}>
               {" "}
-              <Link style={linkStyle} to="/car-parts">
+              <Link
+                to="/car-parts"
+                className={headerStyle.navItem}
+                activeClassName={headerStyle.activeNavItem}
+              >
                 Car parts
               </Link>
             </h2>
