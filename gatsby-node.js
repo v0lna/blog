@@ -55,7 +55,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
-    const arrSlug = node.fileAbsolutePath.split("/blog/content/");
+    const arrSlug = node.fileAbsolutePath.split("/content/");
     const newSlug = `${arrSlug[1].split("/")[0]}${value}`
     createNodeField({
       name: `slug`,
